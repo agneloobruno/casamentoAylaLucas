@@ -1275,10 +1275,10 @@ h1.intro-header::before {
     padding: 0;
     outline: 0;
     border: none;
-    width: 97px;
-    height: 22px;
+    width: 150px;
+    height: 150px;
     background: url("../images/ayla-lucas.PNG") no-repeat center;
-    background-size: 97px 22px;
+    background-size: 100px 120px;
     font: 0/0 a;
     text-shadow: none;
     color: transparent;
@@ -1459,9 +1459,9 @@ h1.intro-header::before {
 
 @media only screen and (max-width: 768px) {
     .header-logo a {
-        width: 88px;
-        height: 20px;
-        background-size: 88px 20px;
+        width: 100px;
+        height: 90px;
+        background-size: 100px 90px;
     }
     .header-logo-over {
         margin-top: 80%;
