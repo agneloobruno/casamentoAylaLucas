@@ -1278,7 +1278,7 @@ h1.intro-header::before {
     width: 150px;
     height: 150px;
     background: url("../images/ayla-lucas.PNG") no-repeat center;
-    background-size: 100px 120px;
+    background-size: 100px 100px;
     font: 0/0 a;
     text-shadow: none;
     color: transparent;
@@ -1660,8 +1660,11 @@ h1.intro-header::before {
 }
 
 .imgProfissional {
-    width: 355px !important;
-    border-radius: 10px;
+    width: 200px !important;
+    border-radius: 50%;
+    height: 200px;
+    object-fit: cover;
+    margin-bottom: 1.5rem;
 }
 
 
