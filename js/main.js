@@ -291,3 +291,36 @@ $(".contagem").each(function () {
       }
     );
 });
+
+document.addEventListener("DOMContentLoaded", function() {
+  // Definir a data final da contagem regressiva
+  var countdownDate = new Date("Dec 07, 2024 18:00:00").getTime();
+
+  // Atualizar a contagem regressiva a cada segundo
+  var countdownFunction = setInterval(function() {
+
+      // Obter o tempo atual
+      var now = new Date().getTime();
+
+      // Calcular a distância entre o agora e a data final
+      var distance = countdownDate - now;
+
+      // Cálculo de tempo para dias, horas, minutos e segundos
+      var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+      // Exibir a contagem regressiva
+      document.getElementById("countdown").innerHTML = days + "d " + hours + "h "
+      + minutes + "m " + seconds + "s ";
+
+      // Mensagem quando a contagem regressiva acabar
+      if (distance < 0) {
+          clearInterval(countdownFunction);
+          document.getElementById("countdown").style.display = "none";
+          document.getElementById("message").innerHTML = "O evento começou!";
+      }
+  }, 1000);
+});
+
