@@ -2925,6 +2925,12 @@ html[data-useragent*='MSIE 10.0'] .home-scrolldown,
     object-fit: cover;
     transition: transform 0.3s ease-in-out;
   }
+
+  .gallery-item p {
+    text-align: center;
+    margin-top: 45px;
+    margin-bottom: 5px;
+  }
   
   .gallery-item:hover img {
     transform: scale(1.1);
@@ -2943,6 +2949,17 @@ html[data-useragent*='MSIE 10.0'] .home-scrolldown,
         background-size: 194px 60px;
     }
 }
+
+#meuMapa {
+    width: 450px; /* Largura padrão para desktops */
+    height: 300px;
+  }
+  
+  @media (max-width: 768px) { /* Ajuste o valor para a largura máxima desejada para dispositivos móveis */
+    #meuMapa {
+      width: 100%;
+    }
+  }
 
 
 /* ===================================================================
