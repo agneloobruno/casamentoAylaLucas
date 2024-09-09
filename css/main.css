@@ -3024,11 +3024,11 @@ footer ul a:visited {
     padding: 0;
     outline: 0;
     border: none;
-    width: 93px;
-    height: 21px;
-    background: url("../images/ayla-lucas.PNG") no-repeat center;
-    background-size: 93px 21px;
-    font: 0/0 a;
+    width: 120px;
+    height: 120px;
+    background: url(../images/ayla-lucas.PNG) no-repeat center;
+    background-size: 120px 120px;
+    font: 0 / 0 a;
     text-shadow: none;
     color: transparent;
     -webkit-transition: all 0.5s ease-in-out;
