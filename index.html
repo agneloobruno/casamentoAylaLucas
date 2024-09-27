@@ -33,7 +33,20 @@
 	================================================== -->
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <style>
+        .div_contagem {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
 
+        #contador {
+            font-family: "montserrat-regular", sans-serif;
+            font-size: 54px;
+            margin-top: 10px;
+            color: #79d1ff;
+        }
+    </style>
 </head>
 
 <body id="top">
@@ -77,6 +90,10 @@
                     <h1 data-aos="fade-up">
                         Sejam Bem Vindos! Aqui começa a história desse Grande Dia!
                     </h1>
+
+                    <div class="div_contagem">
+                        <div id="contador"></div>
+                    </div>
 
                 </div>
 
@@ -610,6 +627,37 @@
             'https://connect.facebook.net/en_US/fbevents.js');
         fbq('init', '969947684542727');
         fbq('track', 'PageView');
+    </script>
+
+    <script>
+        // Definindo a data do evento futuro (Ano Novo neste exemplo)
+        const dataFutura = new Date("Dec 1, 2024 17:00:00").getTime();
+
+        // Atualizando o contador a cada segundo
+        const intervalo = setInterval(function() {
+            
+            // Data e hora atuais
+            const agora = new Date().getTime();
+            
+            // Calculando a diferença entre a data futura e a data atual
+            const diferenca = dataFutura - agora;
+            
+            // Calculando dias, horas, minutos e segundos
+            const dias = Math.floor(diferenca / (1000 * 60 * 60 * 24));
+            const horas = Math.floor((diferenca % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutos = Math.floor((diferenca % (1000 * 60 * 60)) / (1000 * 60));
+            const segundos = Math.floor((diferenca % (1000 * 60)) / 1000);
+            
+            // Exibindo o resultado
+            document.getElementById("contador").innerHTML = dias + "d " + horas + "h " + 
+            minutos + "m " + segundos + "s ";
+
+            // Se a contagem terminar, exibir uma mensagem
+            if (diferenca < 0) {
+                clearInterval(intervalo);
+                document.getElementById("contador").innerHTML = "Feliz Ano Novo!";
+            }
+        }, 1000);
     </script>
     <noscript><img height="1" width="1" style="display:none"
         src="https://www.facebook.com/tr?id=969947684542727&ev=PageView&noscript=1"
